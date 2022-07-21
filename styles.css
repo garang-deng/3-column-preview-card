@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --main-background: hsl(0, 0%, 95%);
+  --sedans-background: hsl(31, 77%, 52%);
+  --suvs-background: hsl(184, 100%, 22%);
+  --luxury-background: hsl(179, 100%, 13%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--main-background);
+  margin: 10px 0;
+}
+
+p {
+  color: var(--paragraph-color);
+}
+
+#main {
+  max-width: 90vw;
+  background-color: var(--main-background);
+  display: grid;
+  place-items: center;
+  margin: 6% auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 60vw;
+  padding: 10% 0;
+}
+
+#sedans {
+  background-color: var(--sedans-background);
+  padding: 30px;
+  border-radius: 10px 10px 0 0;
+}
+
+#suvs {
+  background-color: var(--suvs-background);
+  padding: 30px;
+}
+
+#luxury {
+  background-color: var(--luxury-background);
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+button {
+  width: 60%;
+  height: 3em;
+  background-color: var(--main-background);
+  border-radius: 1.5em;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  font-weight: 700;
+  color: inherit;
+}
+
+button:hover {
+  border: 2px solid var(--main-background);
+  background-color: inherit;
+  color: var(--main-background);
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+  #sedans {
+    width: 32%;
+    border-radius: 10px 0 0 10px;
+  }
+  #suvs {
+    width: 32%;
+  }
+  #luxury {
+    width: 32%;
+    border-radius: 0 10px 10px 0;
+  }
+  button {
+    margin-top: 30px;
+  }
+}
